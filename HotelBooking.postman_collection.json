@@ -1,0 +1,164 @@
+{
+	"info": {
+		"_postman_id": "6c59ad66-5aef-4915-a78e-b4720f4d18e0",
+		"name": "HotelBooking",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Hotel Booking List",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/hotelbooking/api/booking",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"hotelbooking",
+						"api",
+						"booking"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Hotel Booking Insert",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Entity\" : {\r\n        \"RoomType\": \"regular\",\r\n        \"CustomerID\": \"12331\",\r\n        \"Status\": \"paid\",\r\n        \"ExpectedCheckInTime\": \"2020-12-22 12:00\",\r\n        \"ExpectedCheckOutTime\": \"2021-04-01 11:00\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/hotelbooking/api/booking",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"hotelbooking",
+						"api",
+						"booking"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Hotel Booking Get By ReservationID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/hotelbooking/api/booking/1201",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"hotelbooking",
+						"api",
+						"booking",
+						"1201"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Hotel Booking Update By ReservationID",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Patch\" : {\r\n        \"Status\": \"paid\",\r\n        \"ExpectedCheckInTime\": \"2021-05-02 12:00\",\r\n        \"ExpectedCheckOutTime\": \"2021-05-02 13:00\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/hotelbooking/api/booking/1200",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"hotelbooking",
+						"api",
+						"booking",
+						"1200"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Calculate Overdue Amount",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"CheckOutTime\": \"2021-05-02 13:01\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/hotelbooking/api/booking/overdue/1200",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"hotelbooking",
+						"api",
+						"booking",
+						"overdue",
+						"1200"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
