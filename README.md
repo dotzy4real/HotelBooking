@@ -7,7 +7,7 @@ This repo contains the production rest service of rooms booking for a hotel, wit
 - Download the application
   - The Web Rest Service (zipped file)
   - The Database (.bak file)
-  - The postman collection for making calls the service
+  - The postman collection for making calls to the service
 
 - Ensure Sql Server 2014 or higher is installed on windows and restore the database with name: HotelBooking
 - Unzip the Web Rest Service and Add as an application on Default Website under IIS with name HotelBooking
@@ -63,7 +63,7 @@ PUT Body (Payload):
     }
 }
 
-Fields Status, ExpectedCheckInTime and ExpectedCheckOutTime of a booking in the hotel can be updated. Any of the fields can be updated, only a single field too can be updated from the PUT Body as desired
+Fields Status, ExpectedCheckInTime and ExpectedCheckOutTime of a booking in the hotel can be updated. Any of the 3 fields can be updated, only a single field too can be updated from the PUT Body as desired
 
 
 5. **Calculate Overdue Amount**
